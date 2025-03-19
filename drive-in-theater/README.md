@@ -43,7 +43,7 @@ Ez az alkalmazás egy Laravel-alapú rendszer, amely filmek és vetítések keze
 6. Postman hívások importálása a ```drive_in_theater_postman_collection.yml``` fájlból
 
 ##Futtatás
-1. "http://localhost:8080"-as ellenőrizhető phpMyAdmin-al az adatbázis sikeres feltöltése és a postmanből történő POST/DELETE hívások eredményei is. Belépési adatok:
+1. "http://localhost:8080"-as porton ellenőrizhető phpMyAdmin-al az adatbázis sikeres feltöltése és a postmanből történő POST/DELETE hívások eredményei is. Belépési adatok:
    ```
    Felhasználónév: user
    Jelszó: password
