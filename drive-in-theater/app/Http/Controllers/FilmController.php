@@ -4,21 +4,39 @@ namespace App\Http\Controllers;
 
 use App\Models\Film;
 use App\Models\Screening;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 class FilmController extends Controller
 {
+    /**
+     * Lists all the movies
+     *
+     * @return Collection
+     */
     public function index()
     {
         return Film::all();
     }
 
+    /**
+     * Shows a specific movie with screening details
+     *
+     * @param $id
+     * @return mixed
+     */
     public function show($id)
     {
         $film = Film::with('screenings')->findOrFail($id);
         return response()->json($film);
     }
 
+    /**
+     * Save new movie into database
+     *
+     * @param Request $request
+     * @return mixed
+     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -32,6 +50,13 @@ class FilmController extends Controller
         return Film::create($validated);
     }
 
+    /**
+     * Update movie
+     *
+     * @param Request $request
+     * @param $id
+     * @return mixed
+     */
     public function update(Request $request, $id)
     {
         $film = Film::findOrFail($id);
@@ -47,6 +72,12 @@ class FilmController extends Controller
         return $film;
     }
 
+    /**
+     * Remove movie
+     *
+     * @param $id
+     * @return mixed
+     */
     public function destroy($id)
     {
         $film = Film::findOrFail($id);

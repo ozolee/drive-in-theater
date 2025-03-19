@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "56b87524-3e4f-4f04-9c76-00e706ec2d29",
+		"name": "drive-in-theater",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21301886"
+	},
+	"item": [
+		{
+			"name": "Autosmozi - GET - spec film",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/films/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"films",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autosmozi - GET - all films",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/films",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autosmozi - GET - screenings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/screenings/2025-03-25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"screenings",
+						"2025-03-25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autosmozi - POST - store",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"accept-encoding": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"Shrek 2\",\"description\": \"Egy zöld ogre és barátainak kalandjai egy varázslatos világban.\",\"age_rating\": \"6+\",\"language\": \"Magyar\",\"poster_image\": \"shrek.jpg\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/films/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"films",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autosmozi - POST- update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Pókember: Homecoming\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/films/update/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"films",
+						"update",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autosmozi - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/films/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"films",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\DB;
 
 class ScreeningController extends Controller
 {
+    /**
+     * Lists all the movies for a specific day
+     *
+     * @param $day
+     * @return mixed
+     */
     public function index($day)
     {
         $screenings = DB::table('screenings')
